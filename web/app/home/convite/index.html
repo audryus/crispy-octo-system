@@ -1,0 +1,46 @@
+{% extends "../template/layout.html" %}
+
+{%block content %} 
+<div class="flex flex-col flex-1 w-full h-screen">
+    <div class="navbar bg-base-200 shadow-md">
+        <div class="navbar-start text-xl px-10">
+            <h2>Wilhelmsen</h2>
+        </div>
+        <div class="navbar-center">
+            <button class="btn btn-neutral m-1">Enviar convite</button>
+            <button class="btn btn-ghost m-1">Nova Solicitacao</button>
+            <div class="dropdown dropdown-hover">
+                <div tabindex="0" role="button" class="btn btn-ghost m-1">Consultas</div>
+                <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a>Solicitações</a></li>
+                    <li><a>Serviços</a></li>
+                    <li><a>Autorizações</a></li>
+                </ul>
+              </div>
+        </div>
+        <div class="navbar-end gap-3 h-16">
+            teste@teste.com
+            <div class="dropdown dropdown-end">
+				<div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+				  <div class="w-10 rounded-full">
+					<img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+				  </div>
+				</div>
+				<ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+				  <li>
+                    <summary class="group"><span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 48 48"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"/></svg></span> Sair</summary>
+
+                  </li>
+				</ul>
+			  </div>
+        </div>
+      </div>
+    <main class="h-full overflow-y-auto">
+      <div class="container w-1/2 px-6 my-12 mx-auto grid">
+        <div class="px-4 py-3 mb-8 rounded-lg shadow-md">
+            {% include "home/convite/form.html" %}
+          </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

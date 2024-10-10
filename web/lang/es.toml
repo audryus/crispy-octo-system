@@ -1,0 +1,5 @@
+[i18n_app_home_convite_hello]
+other = "Hola {{ .Name }}"
+
+[i18n_app_home_convite_button_invite]
+other = "Enviar lo convite"

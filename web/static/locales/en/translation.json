@@ -1,0 +1,11 @@
+{
+    "input": {
+      "placeholder": "a placeholder"
+    },
+    "nav": {
+      "home": "Home",
+      "page1": "Page One",
+      "page2": "Page Two"
+    },
+    "RLY_ERR": "Teste de erro"
+  }

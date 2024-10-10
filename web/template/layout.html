@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="corporate">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>asdasdtheme</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.5"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/loading-states.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.10.0/i18next.min.js" integrity="sha512-Bvk0V/zUcABC4GcQPJ+ptnMo2bhnGF0e1daNz9g/43ChFlwnkrMVV8QZt54om+6J6dCDkSPYw+vcYxeNwrJu2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/static/js/loc-i18next.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-http-backend@1.3.1/i18nextHttpBackend.min.js"></script>
+    <script src="/static/js/i18n.js"></script>
+    <script src="/static/js/toast.js"></script>
+    {% block head %}{% endblock %}
+
+</head>
+
+<body id="body">
+    {% block content %}{% endblock %}
+    <div id="toast" class="toast toast-end transform transition-opacity transition-all duration-150 ease-out scale-100">
+        <template x-data x-for="[id, value] in Object.entries($store.toaster.toasts)" :key="id">
+            <div x-html="value.html"></div>
+        </template>
+    </div>
+</body>
+
+</html>
